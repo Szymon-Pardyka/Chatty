@@ -33,15 +33,54 @@
   "responses": ["To map an appshare drives you should follow the following steps: \n1. Open file explorer \n2. Click on your computer name \n3. In the top ribbon click 'Computer' \n4. Click map network drive \n5. Fill in the path to appshare folder"]
   },
   {"tag": "Jabra speaker phone in meeting room",
-  "patterns": [],
+  "patterns": ["How can I fix speakers in meeting room?", "Why can't I hear anything from speakers in meeting room?", "Why speakers in meeting room do not work?", "Can I add speakers to meeting room?",
+    "Can I switch to speakers in meeting room?", "How to connect meeting room speakers to my laptop?", "How can I connect meeting room speakers to my computer"],
   "responses": ["Not all of the meeting rooms are equipped with VTC's. To be able to have good sound in your meeting speaker, phones are provided in the other meeting rooms. \n If meeting room does not have VTC and speaker installed you can contact local on site support to install it. \nTo connect a speaker plug in the usb cable of the speaker in your laptop. \nDevice should be detected automatically. \nIf sound did not switch to speaker you have to change the device in your system manually under sound icon on the taskbar to 'Echo cancelling speaker phone'"]
   },
   {"tag": "printer setup",
-  "patterns": [],
+  "patterns": ["Can I add printer to my computer?", "How to install printer in my laptop?", "Can you tell me how to print something from my computer?", "Help me with printing the documents",
+    "Help me setup a printer in my laptop", "How can I setup printer"],
   "responses": ["You can setup printer by following the steps: \n1. Go to your start menu and search for 'Printer assignment tool'\n2. Open the tool, select the location, flor and printer ID. \n3. Select install printer - It will be assigned to your deevice. \nAlternatively you can do the same from Citrix"]
   },
   {"tag": "Helpdesk details",
+  "patterns": ["What can I ask HelpDesk about?", "What is helpdesk responsible for?", "Can I ask Helpdesk about", "What are helpdesk responsibilities", "Can helpdesk help me with?", "What does helpdesk do?"],
+  "responses": ["Helpdesk can help you with most of IT related incidents or requests that require first-level support. To ask call them you should call 2424.\nThey create and follow the IT related tickets in ServiceNow incident tickets and are in close level contact with second level support. \nHowever Helpdesk can't:\n - Grant accesses (to security groups, printers, shared drives etc).\n - Manage HR related issues\n - help you with tool usage - they don't provide instructions, etc."]
+  },
+  {"tag": "Token-less VPN/MFA logging",
+  "patterns": ["How can I log to vpn if i lost my token?", "Can I log to VPN without my token?", "Is login to VPN possible if I lost my RSA token?", "What to do If I lost my RSA token", "What should I do when I lose my RSA token",
+    "What to do when I want to log into VPN when I lost my rsa token?"],
+  "responses": ["To connect remotely, without your token you can call 2424 - you will get emergency logon code. Then you can log to RSA self-service (Shortcut in edge in favorites).\n With your pin and generated code you can generate more temporary codes: \nClick on troubleshooting and then select Token is temporary unavailable.\nThen new prompt appears with a set of codes that you may export to file. Codes are valid for only 1 day"]
+  },
+  {"tag": "Citrix v8 logon",
+  "patterns": ["How can I log on to Citrix?", "Where can I access my VDI", "Tell me how to access Citrix", "Can you help me accessing Citrix?", "Tell me how to login to Citrix"],
+  "responses": ["To connect to Citrix open edge browser navigate to Euroclear and select Citrix folder. \nProceed to 'Store Front Prod' and click Log On. You can log on with your pin or with username and password.\n If you want to use username and password click on 'switch to user name and password' and type them in browser. \nIf you want to use pin Click log on, select VDI and type pin in new window"]
+  },
+  {"tag": "killing processes on vdi",
+  "patterns": ["How to shut down frozen process on my VDI?", "Tell me how to kill frozen programs on VDI", "What to do when program freezes on my VDI?", "How can I fix frozen application on my Virtual machine?"],
+  "responses": ["To kill frozen process on your VDI you need to open task manager, select process and click on End Task. \nTo open task manager you have to navigate to VDI's taskbar, since standard Ctrl-Alt-Delete combination will open you device's prompt"]
+  },
+  {"tag": "blocked citrix",
+  "patterns": ["Why is my citrix account blocked?", "How can I unlock my citrix account?", "What to do when my citrix is blocked", "How can I unlock disabled citrix account?", "What can I do to fix disabled citrix account"],
+  "responses": ["If you get the message that your account is blocked/disabled you have to contact helpdesk under 2424."]
+  },
+  {"tag": "Citrix server name",
+  "patterns": ["How can I check Citrix server name?", "Where can I find Citrix server name?", "Where can i Get citrix server name?", "How to find citrix server name?"],
+  "responses": ["If you are in Citrix V6 go to start menu - name is displayed between recent items and control panel.\n If session is in V8 then you can find an Icon that displays server name. It can also be found in the file explorer on panel on the left"]
+  },
+  {"tag": "service now selfhelp",
+  "patterns": ["Where can I find selfhelp article?", "Are there any kind of self help articles?", "Can I find somewhere a description of solution for frequent problems?", "Do we have a FAQ for frequent problems?"],
+  "responses": ["On service now portal you can find a knowledge section. It is very well organised - you can try to find solution to your problem\nby selecting proper categories and searching through articles."]
+  },
+  {"tag": "Outlook signature",
+  "patterns": ["How can I create my outlook signature?", "Tell me how to make my own outlook signature", "Where can I change my outlook signature?", "How to create my corporal signature?", "can I create outlook signature?"],
+  "responses": ["You can create your signature in citrix or your physical device. Open new email tab and select signatures.\nThen change the settings in new messages and replies/forwards.\nSelect Euroclear email signature for both options and click ok."]
+  },
+  {"tag": "Outlook distribution List",
+  "patterns": ["How can I create outlook distribution List?", "How can I update outlook distribution List?", "Tell me how to add someone to distribution List", "How can I remove someone from distribution List?"],
+  "responses": ["Distribution List can't be managed by its owner. Every distribution list change must be done through DSA tool inside lotus notes by raising a request. \nTo do so, create new request, select lotus notes as application since there is no Outlook App, \nselect what type of action you want to perform and add all necessary details. Once done you will be notified"]
+  },
+  {"tag": "",
   "patterns": [],
-  "responses": [""]
+  "responses": []
   }
 ]}

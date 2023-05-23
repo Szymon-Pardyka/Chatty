@@ -1,0 +1,11 @@
+{"intents":  [
+  {"tag": "greetings",
+  "patterns": ["hello!", "Hi", "Hey", "Good day", "Greetings", "What's up", "How is it going"],
+  "responses": ["Hello!", "Hey", "What can I do for you?"]
+  },
+  {"tag": "instructions",
+  "patterns": ["Can you provide instructions about this chat?", "Can you tell me how to talk with you?",
+    "How do I use this application?"],
+  "responses": ["Of course. I am a prototype of chat that should help you get familiar with out company. You can just ask me any question about anything regarding on-boarding and any other company related things. Keep in mind that I am not trained enough yet to remember context of previous questions."]
+  }
+]}

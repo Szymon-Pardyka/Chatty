@@ -5,7 +5,43 @@
   },
   {"tag": "instructions",
   "patterns": ["Can you provide instructions about this chat?", "Can you tell me how to talk with you?",
-    "How do I use this application?"],
-  "responses": ["Of course. I am a prototype of chat that should help you get familiar with out company. You can just ask me any question about anything regarding on-boarding and any other company related things. Keep in mind that I am not trained enough yet to remember context of previous questions."]
+    "How do I use this application?", "Can you explain how do you work?"],
+  "responses": ["Of course. I am a prototype of chat that should help you get familiar with out company. \nYou can just ask me any question about anything regarding on-boarding and any other company related things. \nKeep in mind that I am not trained enough yet to remember context of previous questions."]
+  },
+  {"tag": "expired password",
+  "patterns": ["Can you help me with my expired password?", "How can I deal with expired password?", "What to do when my password expires?", "What should I do when my password expires?",
+    "How do I change the expired password", "Can you explain how to deal with expired password?", "Can you tell me how to change expired password?", "What happens when my windows password expire?"],
+  "responses": ["At first logon windows will prompt you to change the password by entering the Hello PIN -> click OK. \nEnter the pin. If PIN is correct you should see a message that your password has expired. \nNow you need only to enter new password twice and it's done"]
+  },
+  {"tag": "forgotten password",
+  "patterns": ["Can you help me with my forgotten password?", "How can I deal with forgotten password?",
+    "How do I change the forgotten password", "Can you explain how to deal with forgotten password?", "Can you tell me how to change forgotten password?", "What happens when I forget my windows password?", "How can I change the forgotten windows password?"],
+  "responses": ["In this situation you have to options: You can try to reset it via the IAG Portal in Citrix by yourself \n1. Login to https://Iam.group.euroclear.com/identityiq/ by inserting your RSA PIN (linked to your token) + RSA token code (This is called passcode) \n2. Click on the menu button at the top left corner. \n3. Click on manage Access and then manage passwords.\n4. Select the checkbox against 'Windows apps' and click change and then enter new password.\n Second option is to call 2424. You should have your personal questions set in advance to speed up the process. Follow the instructions provided by helpdesk then."]
+  },
+  {"tag": "workstation software request",
+  "patterns": ["Can you help me request software to my workstation?", "How can I request software on my workstation?",
+    "How to request software on my workstation", "Can you explain how to request programs on workstation?", "Can you tell me how do I request software on my machine", "How can I get additional software on my computer"],
+  "responses": ["To get additional software you have to go check if it is present in the service now catalogue: \nif yes, you can select up to 10 software's and up to 10 workstations in single request. Installation will be finished in up to 2 working days. \nIf software is not present then you need an approval and it may take up to 6 weeks."]
+  },
+  {"tag": "bring your own device",
+  "patterns": ["Can I access my email from other devices?", "Can you tell me if it is possible to access the email from other devices/phone?",
+    "How can I check my email or calendar outside of my computer?", "Can I access my calendar or email from my phone?"],
+  "responses": ["Yes, you can use your phone. You need to raise a request in service now (BYOD - bring your own device).\n If you'll get the approve, support team will provide you with a unique code, that will be valid for 4 hours. \nFirst you have to follow the link (link) and fill the PIN that you received from support and follow the instructions on the screen."]
+  },
+  {"tag": "appshare drives",
+  "patterns": [],
+  "responses": ["To map an appshare drives you should follow the following steps: \n1. Open file explorer \n2. Click on your computer name \n3. In the top ribbon click 'Computer' \n4. Click map network drive \n5. Fill in the path to appshare folder"]
+  },
+  {"tag": "Jabra speaker phone in meeting room",
+  "patterns": [],
+  "responses": ["Not all of the meeting rooms are equipped with VTC's. To be able to have good sound in your meeting speaker, phones are provided in the other meeting rooms. \n If meeting room does not have VTC and speaker installed you can contact local on site support to install it. \nTo connect a speaker plug in the usb cable of the speaker in your laptop. \nDevice should be detected automatically. \nIf sound did not switch to speaker you have to change the device in your system manually under sound icon on the taskbar to 'Echo cancelling speaker phone'"]
+  },
+  {"tag": "printer setup",
+  "patterns": [],
+  "responses": ["You can setup printer by following the steps: \n1. Go to your start menu and search for 'Printer assignment tool'\n2. Open the tool, select the location, flor and printer ID. \n3. Select install printer - It will be assigned to your deevice. \nAlternatively you can do the same from Citrix"]
+  },
+  {"tag": "Helpdesk details",
+  "patterns": [],
+  "responses": [""]
   }
 ]}

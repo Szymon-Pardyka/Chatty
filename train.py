@@ -3,7 +3,7 @@ import json
 import pickle
 import numpy as np
 import nltk
-#nltk.download()
+nltk.download()
 
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import Sequential

@@ -1,6 +1,8 @@
+import datetime
 import json
 import pickle
 import random
+from json import JSONEncoder
 
 import nltk
 import numpy as np
@@ -8,8 +10,20 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 import json
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
+
+class ResponseDto:
+    def __init__(self, text):
+        self.author = "user"
+        # self.date = datetime.datetime.now()
+        self.text = text
+
+class ResponseDtoEncoder(JSONEncoder):
+    def default(self, o):
+        return o.__dict__
 
 app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 
@@ -57,20 +71,17 @@ def get_response(intents_list, intents_json):
     return result
 
 
-@app.route('/', methods=['GET'])
-def query_records():
-    return "xyi"
-
-
-@app.route('/', methods=['POST'])
+@app.route('/messages', methods=['POST'])
+@cross_origin()
 def update_record():
+    print(request)
     record = json.loads(request.data)
-    print(record["question"])
-    ints = predict_class(record["question"])
+    messageBody_ = record["message"]
+    print("request body: " + messageBody_)
+    ints = predict_class(messageBody_)
     res = get_response(ints, intents)
-    return jsonify(res)
-
+    resp = ResponseDtoEncoder().encode(ResponseDto(res))
+    print("response: " + res)
+    return resp
 
 app.run(debug=True)
-
-

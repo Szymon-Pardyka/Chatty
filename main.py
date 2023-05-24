@@ -29,7 +29,7 @@ intents = json.loads(open('intents_internal.json').read())
 
 words = pickle.load(open('words.pickle', 'rb'))
 classes = pickle.load(open('classes.pickle', 'rb'))
-model = load_model('chatbot_model.h5')
+model = load_model('chatbot_internal_model.h5')
 
 
 def clean_up_sentence(sentence):
@@ -47,7 +47,6 @@ def bag_of_words(sentence):
                 bag[i] = 1
     return np.array(bag)
 
-
 def predict_class(sentence):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
@@ -62,6 +61,11 @@ def predict_class(sentence):
 
 
 def get_response(intents_list, intents_json):
+    print(intents_list)
+
+    if len(intents_list) == 0:
+        return "I don't know how to answer, I am still learning, hold your horses"
+
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:

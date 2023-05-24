@@ -79,8 +79,8 @@
   "patterns": ["How can I create outlook distribution List?", "How can I update outlook distribution List?", "Tell me how to add someone to distribution List", "How can I remove someone from distribution List?"],
   "responses": ["Distribution List can't be managed by its owner. Every distribution list change must be done through DSA tool inside lotus notes by raising a request. \nTo do so, create new request, select lotus notes as application since there is no Outlook App, \nselect what type of action you want to perform and add all necessary details. Once done you will be notified"]
   },
-  {"tag": "",
-  "patterns": [],
-  "responses": []
+  {"tag": "ServiceNow - How to request something",
+  "patterns": ["How to create a request in serviceNow", "How to request something"],
+  "responses": ["1. Access the ServiceNow Portal.\n2. Click Request something.\n3. Click the right category for your request.\n- Work environment: everything which involves the hardware you use to do your work and what you can see at your desk (Wi-Fi, your laptop, the facilities, your iDevice…)\n- Software & Applications: everything which involves the software you use to work (Citrix, ServiceNow, Jabber SoftPhone, Lotus Notes, Entreprise Vault…)\n- IT to IT: matters which front-end users don’t have access to (ATC processes…)\n4. Select a subcategory amongst those available in the list at the left of your screen.\n5. Find the article which best describes your problem amongst the list.\n6. Verify if this is the form you were after.\n7. Provide all the information needed in the fields, you can also add an attachment or write a description to provide more information to your request. When done, click Order Now.\n8. You will be redirected to your My Tickets page, you can click on any of your tickets to add some information or check out every detail.\n"]
   }
 ]}
